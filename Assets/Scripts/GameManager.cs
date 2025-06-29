@@ -13,6 +13,7 @@ public class GameManager:MonoBehaviour
     public GameObject menuUI;
     public GameObject gameUI;
     public GameObject spawner;
+    public GameObject partical;
 
 
     int lives = 3;
@@ -30,6 +31,7 @@ public class GameManager:MonoBehaviour
         menuUI.SetActive(false);
         gameUI.SetActive(true);
         spawner.SetActive(true);
+        partical.SetActive(true);
 
 
     }
@@ -37,6 +39,7 @@ public class GameManager:MonoBehaviour
     public void GameOver()
     {
         player.SetActive(false);
+        partical.SetActive(false);
 
         Invoke("ReloadLevel", 1.5f);
     }
